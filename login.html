@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style_login.css">
+    <link rel="stylesheet" href="global.css">
+
+    <title>CG Pessoais</title>
+</head>
+<body class="centralize">
+    <form>
+        <div class="i_email">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com">
+            <div class="error" id="emailRequiredError">E-mail é obrigatório.</div>
+            <div class="error" id="invalidEmailError">E-mail inválido.</div>
+        </div>
+        <div>
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" onchange="onChangePassword()" placeholder="senha">
+            <div class="error" id="passwordRequiredError">Senha é obrigatório.</div>
+        </div>
+        <div>
+            <button type="button" class="button-solid" id="login_b" disabled="true" onclick="login()">Entrar</button>
+            <button type="button" class="button-outline" onclick="register()">Cadastro</button>
+        </div>
+        <div>
+            <button type="button" class="button-clear" id="recuperarSenha_b" onclick="recoverPassword()" disabled="true">Recuperar senha</button>
+        </div>
+    </form>
+</body>
+
+<script src="/scriptLogin.js"></script>
+<script src="/validetions.js"></script>
+<script src="/loading.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js";></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js";></script>
+<script src="firebase-init.js"></script>
+</html>

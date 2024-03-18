@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body class="centralize">
+    <form>
+        <div>
+            <label>Email</label>
+            <input type="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()">
+            <div class="error" id="emailRequiredError">E-mail obrigatório.</div>
+            <div class="error" id="invalidEmailError">E-mail inválido.</div>
+        </div>
+        <div>
+            <label>Senha</label>
+            <input type="password" id="password" placeholder="senha" onchange="onChangePassword()">
+            <div class="error" id="passwordRequiredError">Senha obrigatória.</div>
+            <div class="error" id="passwordMinLengthError">Senha minimo 6 caracteres.</div>
+        </div>
+        <div>
+            <label>Confirmar senha</label>
+            <input type="password" id="confirmPassword" onchange="onChangeConfirmPassword()" placeholder="Confirmar senha">
+            <div class="error" id="passwordDoesntMatchLengthError">Senha devem ser iguais.</div>
+        </div>
+        <div>
+            <button type="button" onclick="register()" id="registerButton" class="button-solid" disabled="true">Registrar</button>
+        </div>
+        <div>
+            <button type="button" class="button-clear">Login</button>
+        </div>
+    </form>
+</body>
+
+<link rel="stylesheet" href="../../global.css">
+<link rel="stylesheet" href="register.css">
+
+<script src="register.js"></script>
+<script src="../../validetions.js"></script>
+<script src="../../loading.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js";></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js";></script>
+<script src="../../firebase-init.js"></script>
+
+</html>
